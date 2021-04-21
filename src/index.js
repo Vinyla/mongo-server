@@ -4,13 +4,14 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 
 const PORT = 5000;
+const MONGO = 'mongodb://localhst:27017/school';
 
 const app = express();
 app.use(bodyParser.json());
 app.use(helmet());
 
 mongoose
-  .connect('mongodb://localhst:27017/school', {
+  .connect(MONGO, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
