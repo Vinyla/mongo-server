@@ -9,4 +9,4 @@ const list = (req, res) => {
   });
 }
 
-export default { list }
+export default { list };
