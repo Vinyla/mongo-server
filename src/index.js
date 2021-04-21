@@ -12,5 +12,5 @@ mongoose
 
 app.listen(config.port, (error) => {
   if (error) return console.log(error);
-  console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${config.port}`);
 });
