@@ -9,10 +9,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(helmet());
 
-mongoose.connect('mongodb://localhst:27017/school', {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-});
+mongoose
+  .connect('mongodb://localhst:27017/school', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
+  .then(() => console.log('Database connected'))
+  .catch(() => console.log('Error connecting to database'));
 
 app.listen(PORT, (error) => {
   if (error) return console.log(error);
