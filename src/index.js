@@ -1,13 +1,6 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import helmet from 'helmet';
 import mongoose from 'mongoose';
-
 import config from './config';
-
-const app = express();
-app.use(bodyParser.json());
-app.use(helmet());
+import app from './app';
 
 mongoose
   .connect(config.mongo, {
