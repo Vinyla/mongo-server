@@ -10,14 +10,14 @@ app.use(bodyParser.json());
 app.use(helmet());
 
 mongoose
-  .connect(config.MONGO, {
+  .connect(config.mongo, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
   .then(() => console.log('Database connected'))
   .catch(() => console.log('Error connecting to database'));
 
-app.listen(config.PORT, (error) => {
+app.listen(config.port, (error) => {
   if (error) return console.log(error);
   console.log(`Server is listening on port ${PORT}`);
 });
