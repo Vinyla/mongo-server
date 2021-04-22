@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vinyla/mongo-server"
+    "url": "git+https://github.com/Vinyla/mongo-server.git"
   },
   "keywords": [
     "node",

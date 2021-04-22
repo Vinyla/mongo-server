@@ -10,6 +10,6 @@ router.route('/courses')
 router.route('/courses/:id')
   .get(ctrl.read)
   .put(ctrl.update)
-  .delete(ctrl.remove);;
+  .delete(ctrl.remove);
 
 export default router;

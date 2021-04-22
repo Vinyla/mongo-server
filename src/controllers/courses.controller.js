@@ -9,7 +9,7 @@ const create = (req, res) => {
     }
     res.status(201).json(data);
   });
-};
+}
 
 const list = (req, res) => {
   Course.find((err, data) => {
@@ -18,7 +18,7 @@ const list = (req, res) => {
     }
     res.status(200).json(data);
   });
-};
+}
 
 const read = (req, res) => {
   const id = req.params.id;
@@ -28,7 +28,7 @@ const read = (req, res) => {
     }
     res.status(200).json(data);
   });
-};
+}
 
 const update = (req, res) => {
   const id = req.params.id;
@@ -44,7 +44,7 @@ const update = (req, res) => {
       res.status(200).json(data);
     });
   });
-};
+}
 
 const remove = (req, res) => {
   const id = req.params.id;
@@ -57,8 +57,8 @@ const remove = (req, res) => {
         return res.status(400).json(err.message);
       }
       res.status(200).json('Course deleted.');
-    });
+    })
   });
-};
+}
 
 export default { create, list, read, update, remove };

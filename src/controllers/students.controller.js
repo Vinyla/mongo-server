@@ -60,7 +60,7 @@ const remove = (req, res) => {
        }
        res.status(200).json('Student deleted.');
     });
-  })
+  });
 }
 
 export default { create, list, read, update, remove };
