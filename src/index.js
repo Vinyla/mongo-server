@@ -5,7 +5,7 @@ import app from './app';
 mongoose
   .connect(config.mongo, {
     useUnifiedTopology: true,
-    useNewUrlParser: true,
+    useNewUrlParser: true
   })
   .then(() => console.log('Database connected'))
   .catch(() => console.log('Error connecting to database'));
