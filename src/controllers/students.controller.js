@@ -26,7 +26,7 @@ const read = (req, res) => {
   const id = req.params.id;
   Student.findById(id).exec((err, data) => {
     if (err) {
-      console.log(err);
+      return res.status(400).json(err.message);
     }
     res.status(200).json(data);
   });
